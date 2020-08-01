@@ -16,6 +16,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.vue$/,
+        use: "vue-loader",
+      },
+      {
         test: /\.css$/,
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
@@ -28,7 +32,6 @@ module.exports = {
         use: "babel-loader",
         exclude: /node_modules/,
       },
-      { test: /\.vue$/, use: "vue-loader" },
     ],
   },
 };
